@@ -1,0 +1,22 @@
+
+services:
+  backend:
+    build: ./voice-agent-backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mysql
+  frontend:
+    build: ./voice-agent-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: voice_agent_db
+    ports:
+      - "3306:3306"
