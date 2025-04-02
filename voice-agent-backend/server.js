@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const sequelize = require("./config/db");
-const jobRoutes = require("./routes/jobs");
-const candidateRoutes = require("./routes/candidates");
-const appointmentRoutes = require("./routes/appointments");
+const jobRoutes = require("../routes/jobs");
+const candidateRoutes = require("../routes/candidates");
+const appointmentRoutes = require("../routes/appointments");
 
 const app = express();
 

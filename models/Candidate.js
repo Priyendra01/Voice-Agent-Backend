@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../config/db");
+const sequelize = require("../voice-agent-backend/config/db");
 
 const Candidate = sequelize.define("Candidate", {
   name: { type: DataTypes.STRING, allowNull: false },
